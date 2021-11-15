@@ -16,7 +16,19 @@ class UserController extends Controller
         $password=$request->password;
         $email=$request->email;
         $mobile=$request->mobile;
-        useer::create(["name"=>$name,"password"=>$password,"email"=>$email,"mobile"=>$mobile]);}
+        try{
+         $user=useer::create(["name"=>$name,"password"=>$password,"email"=>$email,"mobile"=>$mobile]);
+         return response()->json([
+            'data'=> $user,
+            'msg' => 'successfully'
+         ],200);
+     }catch(Exception $exception){
+         return response()->json([
+             'data'=> '',
+             'msg' => 'failed'
+          ],500);
+        } 
+        }
     public function get($id){
       try{  
         $user=useer::with('role')->find($id);

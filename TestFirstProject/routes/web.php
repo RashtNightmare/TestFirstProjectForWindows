@@ -19,7 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/add-role',[RoleController::class,'add_role']);
+Route::get('/add-role',function(){
+    return view('add_role');
+});
 
 
 
