@@ -8,16 +8,21 @@
    <body>
        add_role
        <form method="get" action="/role">
-        <!-- {{ csrf_field() }} -->
-       <input name="name"/>
+    {{ csrf_field() }} -->
+       <!-- <input name="name"/>
           <button type="submit">save</button>
        </form>
-   </body>
+   </body> -->
 
 <!-- </html> --> 
 
 <div class="w-full max-w-xs">
-  <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link href="{{ asset('css/app.css') }}" rel="stylesheet">     
+   </head>  
+<form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
     <div class="mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
         Username
