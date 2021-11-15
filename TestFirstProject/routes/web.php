@@ -26,3 +26,4 @@ Route::get('/add-role',[RoleController::class,'add_role']);
 Route::get('/role',[RoleController::class,'add']);
 Route::get('/user',[UserController::class,'add']);
 Route::get('/user-get/{id}',[UserController::class,'get']);
+Route::get('/role-get/{id}',[RoleController::class,'users']);
