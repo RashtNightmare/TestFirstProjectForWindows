@@ -10,6 +10,7 @@ use Exception;
 
 class RoleController extends Controller
 {
+    //yawp
     //
     public function add(Request $request){
         $name=$request->name;
