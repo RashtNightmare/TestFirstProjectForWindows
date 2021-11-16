@@ -4,8 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Admin\useer;
-use App\Http\Controllers\Admin\RoleController;
+use App\Models\Admin\User;
 use Exception;
 
 class UserController extends Controller
@@ -17,21 +16,21 @@ class UserController extends Controller
         $email=$request->email;
         $mobile=$request->mobile;
         try{
-         $user=useer::create(["name"=>$name,"password"=>$password,"email"=>$email,"mobile"=>$mobile]);
+         $user=User::create(["name"=>$name,"password"=>$password,"email"=>$email,"mobile"=>$mobile]);
          return response()->json([
             'data'=> $user,
             'msg' => 'successfully'
          ],200);
      }catch(Exception $exception){
          return response()->json([
-             'data'=> '',
+             'data'=> $exception,
              'msg' => 'failed'
           ],500);
         } 
         }
     public function get($id){
       try{  
-        $user=useer::with('role')->find($id);
+        $user=User::with('role')->find($id);
         if(!$user){
             return response()->json(['data' => '','msg' => 'NOT FOUND'],404);
         }else{

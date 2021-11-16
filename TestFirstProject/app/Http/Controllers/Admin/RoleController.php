@@ -23,7 +23,7 @@ class RoleController extends Controller
             ],200);
         }catch(Exception $exception){
             return response()->json([
-                'data'=> '',
+                'data'=> $exception,
                 'msg' => 'failed'
              ],500);
            }  
