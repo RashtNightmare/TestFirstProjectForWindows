@@ -18,6 +18,8 @@ class User extends Model
         'name',
         'email',
         'password',
+        'mobile',
+        'role_id',
     ];
 
     /**

@@ -15,8 +15,9 @@ class UserController extends Controller
         $password=$request->password;
         $email=$request->email;
         $mobile=$request->mobile;
+        $role_id=$request->role_id;
         try{
-         $user=User::create(["name"=>$name,"password"=>$password,"email"=>$email,"mobile"=>$mobile]);
+         $user=User::create(["name"=>$name,"password"=>$password,"email"=>$email,"mobile"=>$mobile,"role_id"=>$role_id]);
          return response()->json([
             'data'=> $user,
             'msg' => 'successfully'

@@ -55,10 +55,18 @@ User </label>
        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" name="name" type="text" placeholder="Name">
     </div>
     <div class="mb-4">
+
+<label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+         Email
+        </label>
+       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" type="text" placeholder="smth@gmail.com">
+    </div>
+
+    <div class="mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
         Password
       </label>
-      <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************">
+      <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" name="password" type="password" placeholder="******************">
     </div>
 
     <div class="mb-4">
@@ -66,15 +74,15 @@ User </label>
     <label class="block text-gray-700 text-sm font-bold mb-2" for="mobile">
       mobile
     </label>
-    <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="mobile" type="mobile" placeholder="0000-000-00-00">
+    <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="mobile" name="mobile" type="mobile" placeholder="0000-000-00-00">
   </div>
 
       <div class="flex items-center justify-between">
 
     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-        State
+        Role_id
       </label>
-      <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+      <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="role_id" id="grid-state">
           <!-- <option>User</option>
           <option>Role</option> -->
 <?php
